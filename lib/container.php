@@ -93,6 +93,7 @@ class CDNContainer extends ObjStoreBase {
 		}
 		$this->container_url = $this->Url();
 		$headers = $this->MetadataHeaders();
+		$headers['Content-Length'] = 0;
 		$response = $this->Service()->Request(
 			$this->Url(),
 			'PUT',
